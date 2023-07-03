@@ -37,7 +37,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.drm.mode.force=640x480 \
     gralloc.drm.kms=/dev/dri/card0 \
     ro.opengles.version=131072 \
-    ro.hardware.egl=mesa
+    ro.hardware.vulkan=pastel \
+    ro.hardware.egl=angle
 
 # application packages
 PRODUCT_PACKAGES += \
@@ -57,11 +58,12 @@ PRODUCT_PACKAGES += \
 
 # graphics hal
 PRODUCT_PACKAGES += \
-    libEGL_mesa \
-    libGLESv1_CM_mesa \
-    libGLESv2_mesa \
-    libgallium_dri \
-    libglapi
+    vulkan.pastel \
+    libEGL_angle \
+    libGLESv1_CM_angle \
+    libGLESv2_gangle
+
+PRODUCT_REQUIRES_INSECURE_EXECMEM_FOR_SWIFTSHADER := true
 
 # hardware/interfaces
 PRODUCT_PACKAGES += \
@@ -86,6 +88,8 @@ PRODUCT_PACKAGES += \
 
 # system configurations
 PRODUCT_COPY_FILES := \
+    frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level.xml \
+    frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.ethernet.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.hdmi.cec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hdmi.cec.xml \

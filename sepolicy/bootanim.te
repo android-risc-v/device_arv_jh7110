@@ -1,1 +1,2 @@
 gpu_access(bootanim)
+allow bootanim self:process execmem;
