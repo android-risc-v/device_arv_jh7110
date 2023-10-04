@@ -65,9 +65,9 @@ PRODUCT_PACKAGES += \
 
 # hardware/interfaces
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@2.0-service.arv \
-    android.hardware.graphics.mapper@2.0-impl.arv \
-    android.hardware.graphics.composer@2.1-service.arv \
+    android.hardware.graphics.allocator-service.arv \
+    android.hardware.graphics.mapper@4.0-impl.arv \
+    android.hardware.graphics.composer-service.arv \
     android.hardware.audio@4.0-impl \
     android.hardware.audio.effect@4.0-impl \
     android.hardware.audio.service \
