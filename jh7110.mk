@@ -33,11 +33,12 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.usejit=false \
-    ro.hw_timeout_multiplier=8 \
+    ro.hw_timeout_multiplier=16 \
     debug.drm.mode.force=640x480 \
     gralloc.drm.kms=/dev/dri/card0 \
     ro.opengles.version=131072 \
-    ro.hardware.egl=mesa
+    ro.hardware.egl=mesa \
+    ro.hdmi.device_type=4
 
 # application packages
 PRODUCT_PACKAGES += \
@@ -81,7 +82,9 @@ PRODUCT_PACKAGES += \
     android.hardware.health.storage@1.0-service \
     android.hardware.wifi@1.0-service \
     android.hardware.configstore@1.1-service \
-    android.hardware.tv.cec@1.0-service.mock \
+    android.hardware.tv.hdmi.connection-service \
+    android.hardware.tv.hdmi.cec-service \
+    android.hardware.tv.hdmi.earc-service \
     vndservicemanager
 
 # system configurations
