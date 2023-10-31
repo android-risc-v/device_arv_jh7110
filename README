@@ -11,7 +11,7 @@
  Refer to http://source.android.com/source/building.html
 
   $ source build/envsetup.sh
-  $ lunch jh7110-eng
+  $ lunch jh7110-trunk_staging-eng
   $ make ramdisk systemimage vendorimage
 
 # Prepare sd card
