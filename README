@@ -2,7 +2,7 @@
   https://source.android.com/setup/build/initializing
 
 # Download Android source
-  https://github.com/android-risc-v/local_manifests
+  https://github.com/android-risc-v/local_manifests/tree/arv-master
 
 # Patch framework source :
   https://github.com/android-risc-v/device_arv_jh7110/wiki/arv-master-:-framework-patch
